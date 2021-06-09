@@ -11,8 +11,6 @@ Most of the code n guides i've found online..
 I will update when I can with fresh content. !! :-) 
 
 
-#! /bin/python/env
 
-devildog13 = 'My name is Christopher Hunter, from sunny Scotland' 
-print("   ")
-print(devildog13)
+devildog13 = 'My name is Christopher Hunter, Im from sunny Scotland'
+
