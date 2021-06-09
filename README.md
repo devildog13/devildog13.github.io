@@ -13,5 +13,5 @@ I will update when I can with fresh content. !! :-)
 
 #! /bin/python/env
 
-devildog13 = 'My name is Christopher Hunter, from sunny Scotland'
+devildog13 = 'My name is Christopher Hunter, from sunny Scotland' \n
 print(devildog13)
