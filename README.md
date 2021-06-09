@@ -13,5 +13,6 @@ I will update when I can with fresh content. !! :-)
 
 #! /bin/python/env
 
-devildog13 = 'My name is Christopher Hunter, from sunny Scotland' \n
+devildog13 = 'My name is Christopher Hunter, from sunny Scotland' 
+print("   ")
 print(devildog13)
