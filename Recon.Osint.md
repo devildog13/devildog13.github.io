@@ -22,7 +22,7 @@ dig +short google.com
 
 $ Find ASN for IP Address using the 'curl' cmd line tool. [ apt-get install curl -y]
 
-curl -s http://ip-api.com/json/198.168.0.4  | jq -r .as
+curl -s http://ip-api.com/json/1.1.1.1 | jq -r .as
 
 
 
