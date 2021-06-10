@@ -16,21 +16,23 @@ Credit to https://awesome.re For great awsome wiki's, list's, guides and code. !
 ```
 dig +short google.com
 
+
 ```
 
 
-$ Find ASN for IP Address using the 'curl' cmd line tool. [ apt-get install curl -y]
+# Find ASN for IP Address using the 'curl' cmd line tool. [ apt-get install curl -y]
 ```
 curl -s http://ip-api.com/json/1.1.1.1 | jq -r .as
 ```
 
 
 
-We can use WHOIS service or NSE scripts to identify all the netblocks that belong to the ASN number.
+# We can use WHOIS service or NSE scripts to identify all the netblocks that belong to the ASN number.
 
 ```
 nmap --script targets-asn --script-args targets-asn.asn=15169
 ```
+
 
 [ARIN WHOIS server] 	(https://www.arin.net/resources/services/whois_guide.html)
 
@@ -48,7 +50,8 @@ Extracting email addresses from WHOIS by querying entries that contain email add
 [https://cdn-images-1.medium.com/max/1600/1*oYGnT18lLtml0WUfGpACpA.png]
 
 
-*   We can query [RADB WHOIS server] to return all the netblocks that belong to an Autonomous System Number(ASN)
+
+#  We can query [RADB WHOIS server] to return all the netblocks that belong to an Autonomous System Number(ASN)
                                                                         (http://www.radb.net/support/query1.php)
 ```
 whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
@@ -57,12 +60,14 @@ whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo "([0-9.]+){4}/[0-9]+"
 
 FINING the Autonomous System Number(ASN)}
 
+
 # Listing all the netblocks under an ASN using a query against RADB WHOIS server
 
 * We can query ARIN WHOIS server to return all POC, ASN, organizations, and end user customers for a given KEYWORD.
 
 ```
 whois -h whois.arin.net "z wikimedia"
+
 ```
 
 Nmap Examples     
@@ -82,17 +87,21 @@ nmap -sP 10.0.0.0/24
 nmap -p 1-65535 -sV -sS -T4 target
 ```
 
+
 ## Full TCP port scan using with service version detection - usually my first scan, I find T4 more accurate than T5 and still "pretty quick".
 ```
 
 nmap -v -sS -A -T4 target
+
 ```
 
 ## Prints verbose output, runs stealth syn scan, T4 timing, OS and version detection + traceroute and scripts against target services.
 
 ```
 nmap -v -sS -A -T5 target
+
 ```
+
 
 ## Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection + traceroute and scripts against target services.
 
@@ -100,10 +109,24 @@ nmap -v -sS -A -T5 target
 nmap -v -sV -O -sS -T5 target
 ```
 
+
 # [Find web-servers]
 
 
 nmap -Pn -p80 -oX logs/pb-port80scan.xml -oG logs/pb-port80scan.gnmap 216.163.128.20/20
 
 #-> This scans 4096 IPs for any web servers (without pinging them) and saves the output in grepable and XML formats.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
