@@ -20,14 +20,14 @@ dig +short google.com
 ```
 
 
-# Find ASN for IP Address using the 'curl' cmd line tool. [ apt-get install curl -y]
+ Find ASN for IP Address using the 'curl' cmd line tool. [ apt-get install curl -y]
 ```
 curl -s http://ip-api.com/json/1.1.1.1 | jq -r .as
 ```
 
 
 
-# We can use WHOIS service or NSE scripts to identify all the netblocks that belong to the ASN number.
+ We can use WHOIS service or NSE scripts to identify all the netblocks that belong to the ASN number.
 
 ```
 nmap --script targets-asn --script-args targets-asn.asn=15169
@@ -36,7 +36,7 @@ nmap --script targets-asn --script-args targets-asn.asn=15169
 
 [ARIN WHOIS server] 	(https://www.arin.net/resources/services/whois_guide.html)
 
-* A quick 'ARIN WHOIS server' search returns all the entries that has email address of a given domain name,
+ A quick 'ARIN WHOIS server' search returns all the entries that has email address of a given domain name,
  which in this case is _icann.org._ We are extracting only the email addresses from the results, 
  Piped it into grep -E 'Regex + Uniq to sort results..		
 
@@ -61,7 +61,7 @@ whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo "([0-9.]+){4}/[0-9]+"
 FINING the Autonomous System Number(ASN)}
 
 
-# Listing all the netblocks under an ASN using a query against RADB WHOIS server
+ Listing all the netblocks under an ASN using a query against RADB WHOIS server
 
 * We can query ARIN WHOIS server to return all POC, ASN, organizations, and end user customers for a given KEYWORD.
 
@@ -73,7 +73,7 @@ whois -h whois.arin.net "z wikimedia"
 Nmap Examples     
 -------------
 
-# Basic Nmap scanning examples, often used at the first stage of enumeration.
+Basic Nmap scanning examples, often used at the first stage of enumeration.
 
 Command |	Description
 
